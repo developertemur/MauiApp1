@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage"
+             BackgroundColor="#121212">
+
+    <VerticalStackLayout Padding="24" Spacing="20" VerticalOptions="Center">
+        <Label Text="Tic Tac Toe"
+               FontSize="32"
+               FontAttributes="Bold"
+               TextColor="White"
+               HorizontalOptions="Center" />
+        <Label Text="Developer Temur"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="White"
+               HorizontalOptions="Center" />
+
+        <Label x:Name="StatusLabel"
+               Text="Player X's turn"
+               FontSize="18"
+               TextColor="#D0D0D0"
+               HorizontalOptions="Center" />
+
+        <Grid RowDefinitions="*, *, *"
+              ColumnDefinitions="*, *, *"
+              ColumnSpacing="8"
+              RowSpacing="8"
+              WidthRequest="300"
+              HeightRequest="300"
+              HorizontalOptions="Center">
+
+            <Button x:Name="Cell00" Grid.Row="0" Grid.Column="0" Clicked="OnCellClicked" FontSize="40" FontAttributes="Bold" BackgroundColor="#1E1E1E" TextColor="White" />
+            <Button x:Name="Cell01" Grid.Row="0" Grid.Column="1" Clicked="OnCellClicked" FontSize="40" FontAttributes="Bold" BackgroundColor="#1E1E1E" TextColor="White" />
+            <Button x:Name="Cell02" Grid.Row="0" Grid.Column="2" Clicked="OnCellClicked" FontSize="40" FontAttributes="Bold" BackgroundColor="#1E1E1E" TextColor="White" />
+
+            <Button x:Name="Cell10" Grid.Row="1" Grid.Column="0" Clicked="OnCellClicked" FontSize="40" FontAttributes="Bold" BackgroundColor="#1E1E1E" TextColor="White" />
+            <Button x:Name="Cell11" Grid.Row="1" Grid.Column="1" Clicked="OnCellClicked" FontSize="40" FontAttributes="Bold" BackgroundColor="#1E1E1E" TextColor="White" />
+            <Button x:Name="Cell12" Grid.Row="1" Grid.Column="2" Clicked="OnCellClicked" FontSize="40" FontAttributes="Bold" BackgroundColor="#1E1E1E" TextColor="White" />
+
+            <Button x:Name="Cell20" Grid.Row="2" Grid.Column="0" Clicked="OnCellClicked" FontSize="40" FontAttributes="Bold" BackgroundColor="#1E1E1E" TextColor="White" />
+            <Button x:Name="Cell21" Grid.Row="2" Grid.Column="1" Clicked="OnCellClicked" FontSize="40" FontAttributes="Bold" BackgroundColor="#1E1E1E" TextColor="White" />
+            <Button x:Name="Cell22" Grid.Row="2" Grid.Column="2" Clicked="OnCellClicked" FontSize="40" FontAttributes="Bold" BackgroundColor="#1E1E1E" TextColor="White" />
+        </Grid>
+
+        <Button Text="Reset Game"
+                BackgroundColor="#4CAF50"
+                TextColor="White"
+                FontAttributes="Bold"
+                Clicked="OnResetClicked"
+                WidthRequest="200"
+                HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
